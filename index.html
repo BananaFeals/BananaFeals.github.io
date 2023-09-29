@@ -73,13 +73,17 @@ const stickyBar = document.getElementById("sizing");
 
 window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
-    const newHeight = 100 - scrollY; // Adjust this value to control the resize speed
 
-    // Limit the minimum height
-    if (newHeight > 30) {
-        stickyBar.style.height = newHeight + "px";
+    if (scrollY > 0) {
+        const newHeight = 100 - scrollY; // Adjust this value to control the resize speed
+
+        // Limit the minimum height
+        if (newHeight > 30) {
+            stickyBar.style.height = newHeight + "px";
+        }
     }
 });
+
 
 	 </script>
 </head>
