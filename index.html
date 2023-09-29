@@ -70,28 +70,24 @@ function scrollToTop() {
   animateScroll();
 }
 
-const stickyBar = document.getElementById("banner");
+window.onscroll = function() {scrollFunction()};
 
-        window.addEventListener("scroll", () => {
-            const scrollY = window.scrollY;
-
-            if (scrollY > 0) {
-                const newHeight = 100 - scrollY; // Adjust this value to control the resize speed
-
-                // Limit the minimum height
-                if (newHeight > 30) {
-                    stickyBar.style.height = newHeight + "px";
-                }
-            }
-        });
-
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.width = "90px";
+    document.getElementById("header").style.height = "30px";
+  } else {
+    document.getElementById("header").style.width = "30px";
+    document.getElementById("header").style.height = "10px";
+  }
+}
 
 	 </script>
 </head>
 
 <body>
-   <div class="scrolling-banner">
-        <button id="banner" onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
+   <div class="scrolling-banner" id="header">
+        <button onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
     </div>
     <div class="content">
         <h1 style="text-align: center;">Original by: <a href="https://twitter.com/_SoAwesome_"style="color: red; text-decoration: none;">@_SoAwesome_</a></h1>
