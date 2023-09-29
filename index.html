@@ -3,7 +3,7 @@
 
 <head>
     <style>
-        body {
+     body {
             margin: 0;
             padding: 0;
             background-image: url('images/background.jpg');
@@ -28,6 +28,7 @@
             margin-top: 150px; /* Adjust margin as needed */
             color: #fff; /* Set your desired text color here */
         }
+
 
 	.comics {
 	    display: flex;
@@ -71,26 +72,26 @@ function scrollToTop() {
 
 const stickyBar = document.getElementById("banner");
 
-window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
+        window.addEventListener("scroll", () => {
+            const scrollY = window.scrollY;
 
-    if (scrollY > 0) {
-        const newHeight = 100 - scrollY; // Adjust this value to control the resize speed
+            if (scrollY > 0) {
+                const newHeight = 100 - scrollY; // Adjust this value to control the resize speed
 
-        // Limit the minimum height
-        if (newHeight > 30) {
-            stickyBar.style.height = newHeight + "px";
-        }
-    }
-});
+                // Limit the minimum height
+                if (newHeight > 30) {
+                    stickyBar.style.height = newHeight + "px";
+                }
+            }
+        });
 
 
 	 </script>
 </head>
 
 <body>
-    <div class="scrolling-banner">
-        <button id="banner" style="opacity: 1;" onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
+   <div class="scrolling-banner">
+        <button id="banner" onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
     </div>
     <div class="content">
         <h1 style="text-align: center;">Original by: <a href="https://twitter.com/_SoAwesome_"style="color: red; text-decoration: none;">@_SoAwesome_</a></h1>
