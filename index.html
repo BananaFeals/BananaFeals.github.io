@@ -76,7 +76,17 @@ function scrollToTop() {
   animateScroll();
 }
 
+const resizableButton = document.getElementById("sizing");
 
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const newWidth = 200 - scrollY; // Adjust this value to control the resize speed
+
+    // Limit the minimum width
+    if (newWidth > 50) {
+        resizableButton.style.width = newWidth + "px";
+    }
+});
 	 </script>
 </head>
 
