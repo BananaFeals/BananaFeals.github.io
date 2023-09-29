@@ -9,7 +9,89 @@
 <body>
 <h1>AkI's Site</h1>
 <p>made by aki</p>
+<!DOCTYPE html>
+<html>
 
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg');
+            background-size: 20%;
+            background-repeat: repeat;
+        }
+
+        .scrolling-banner {
+            position: -webkit-sticky; /* For Safari */
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            white-space: nowrap; /* Modify this as needed */
+        }
+
+        .scrolling-banner img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .content {
+            margin-top: 150px; /* Adjust margin as needed */
+            color: #fff; /* Set your desired text color here */
+        }
+    </style>
+	
+	<script>
+function scrollToTop() {
+  // Create an animation function
+  function animateScroll() {
+    const scrollY = window.scrollY;
+    if (scrollY > 0) {
+      // Calculate the distance to scroll in each frame
+      const distance = Math.max(scrollY / 60, 1); // Adjust the 60 for desired speed
+      
+      // Scroll by the distance calculated
+      window.scrollTo(0, scrollY - distance);
+      // Request the next frame
+      window.requestAnimationFrame(animateScroll);
+    }
+  }
+
+  // Start the animation
+  animateScroll();
+}
+
+
+	 </script>
+</head>
+
+<body>
+    <div class="scrolling-banner">
+        <button style="opacity: 1;" onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
+    </div>
+    <div class="content">
+        <h1 style="text-align: center;">Original by: <a href="https://twitter.com/_SoAwesome_"style="color: red; text-decoration: none;">@_SoAwesome_</a></h1>
+		<h1 style="text-align: center;">Original by: <a href="https://twitter.com/Xploshi"style="color: red; text-decoration: none;">@Xploshi</a></h1>
+		<h1 style="text-align: center; color: chartreuse;">Archive by: <a href="https://twitter.com/HRanchFarmer"style="color: lime; text-decoration: none;">@HRanchFarmer</a></h1>
+		<h1 style="text-align: center;">Archived because I miss this website. I'm not trying to surpass the original, as shared by <a href="https://twitter.com/_SoAwesome_"style="color: red; text-decoration: none;">@_SoAwesome_</a>. Also, guest comics with the hashtag #BBcomics. Goodbye!</h1>
+    </div>
+
+    <div class="container">
+        <div class="comics">
+            <h2>Comics by Xploshi</h2>
+            <!-- Place your Xploshi comics here -->
+        </div>
+        <div class="guest-comics">
+            <h2>Guest Comics</h2>
+            <!-- Place guest comics here -->
+        </div>
+		
+		<h1 class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed ex ut tortor volutpat ultricies vel ut est. Curabitur id metus risus. Nulla aliquam lacinia urna vitae posuere. Nam venenatis maximus leo in dictum. Sed ornare nisl fermentum, maximus mi eu, posuere purus. Aliquam varius pretium massa, et volutpat sapien luctus eget. Nullam imperdiet faucibus nulla at scelerisque. Donec a diam at leo ullamcorper eleifend. Vestibulum a lacinia urna. Quisque at lorem ipsum. Vivamus efficitur augue quis augue hendrerit fringilla a vel erat. Pellentesque pretium purus nec finibus dapibus.Etiam nec mauris vel libero suscipit tincidunt. Duis at velit dapibus felis elementum vulputate. Curabitur interdum ante ut felis facilisis, sed eleifend orci laoreet. Mauris in pharetra tortor. Integer interdum hendrerit elit ut pellentesque. Vestibulum facilisis felis non ipsum facilisis hendrerit. Proin ac aliquet diam. Ut viverra ligula quis sem rhoncus ultrices. Sed vitae accumsan sem. In vitae consectetur odio.Sed viverra auctor eros eget aliquet. Mauris eget ante gravida, facilisis augue quis, porta ante. Ut dignissim malesuada urna, in interdum ligula condimentum elementum. Aenean nec nulla nec risus malesuada mollis. Praesent tincidunt sed quam ac ornare. Sed hendrerit blandit purus quis dapibus. In augue nulla, lacinia eu tempus a, congue et augue. Etiam consectetur, nunc in pharetra pellentesque, neque massa iaculis neque, et condimentum mauris magna non eros. Nulla aliquam bibendum posuere. Integer leo dolor, congue ut rutrum sed, cursus ultricies diam. Integer ac consequat nisl. Aliquam et arcu bibendum, tincidunt arcu in, pharetra magna.Vivamus at sollicitudin eros. Maecenas tempor, nunc a tincidunt placer</h1>
+    </div>
+
+</body>
+
+</html>
 <p>part 2</p>
 
   <p>FInD THE MESSAGE</p>
