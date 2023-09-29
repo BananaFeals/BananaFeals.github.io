@@ -34,15 +34,27 @@
 	    justify-content: space-between;
 	}
 	.xploshi {
-	    flex: 1;
-	    text-align: left;
+	  float: left;
+	  align-items: center;
+	  display: flex;
+	  flex-direction: column;
 	}
 
 	.guest-comics {
-	    flex. 1;
-	    text-align: right;
+	  float: right;
+	  align-items: center;
+	  display: flex;
+	  flex-direction: column;
 	}
-    </style>
+
+	#sizing {
+	    width: 200px;
+	    height: 50px;
+	    background-color: lightblue;
+	    text-align: center;
+	    transition: all 0.3s ease; /* Add smooth transition effect */
+	}
+	    </style>
 	
 	<script>
 function scrollToTop() {
@@ -70,7 +82,7 @@ function scrollToTop() {
 
 <body>
     <div class="scrolling-banner">
-        <button style="opacity: 1;" onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
+        <button id="sizing" style="opacity: 1;" onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
     </div>
     <div class="content">
         <h1 style="text-align: center;">Original by: <a href="https://twitter.com/_SoAwesome_"style="color: red; text-decoration: none;">@_SoAwesome_</a></h1>
