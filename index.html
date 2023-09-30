@@ -76,27 +76,22 @@ function scrollToTop() {
 }
 
 // Define a debounce function
-function debounce(func, delay) {
-  let timeoutId;
-  return function() {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(func, delay);
-  };
-}
+window.onscroll = function() {
+  scrollFunction();
+};
 
-// Your scroll function
 function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header").style.width = "400px";
-    document.getElementById("header").style.height = "100px";
+  const header = document.getElementById("header");
+  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollPosition !== 0) {
+    header.style.width = "400px";
+    header.style.height = "100px";
   } else {
-    document.getElementById("header").style.width = "auto";
-    document.getElementById("header").style.height = "auto";
+    header.style.width = "auto";
+    header.style.height = "auto";
   }
 }
-
-// Attach the debounced scrollFunction to the scroll event
-window.onscroll = debounce(scrollFunction, 100); // Adjust the delay (in milliseconds) as needed
 
 
 	 </script>
