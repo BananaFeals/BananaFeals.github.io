@@ -84,7 +84,7 @@ function scrollFunction() {
   const header = document.getElementById("header");
   const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollPosition !== 0) {
+  if (scrollPosition > 6) {
     header.style.width = "400px";
     header.style.height = "100px";
   } else {
