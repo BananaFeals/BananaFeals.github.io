@@ -20,7 +20,6 @@
         .scrolling-banner {
            position: fixed;
 	   top: 0%;
-           left: 50%;
         }
 
 
@@ -100,9 +99,11 @@ function scrollFunction() {
   if (scrollPosition !== 0) {
     header.style.width = "400px";
     header.style.height = "100px";
+    left: 50%;
   } else {
     header.style.width = "auto";
     header.style.height = "auto";
+    left: 0%;
   }
 }
 
