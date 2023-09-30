@@ -75,8 +75,16 @@ function scrollToTop() {
   animateScroll();
 }
 
-window.onscroll = function() {scrollFunction()};
+// Define a debounce function
+function debounce(func, delay) {
+  let timeoutId;
+  return function() {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(func, delay);
+  };
+}
 
+// Your scroll function
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("header").style.width = "400px";
@@ -87,12 +95,16 @@ function scrollFunction() {
   }
 }
 
+// Attach the debounced scrollFunction to the scroll event
+window.onscroll = debounce(scrollFunction, 100); // Adjust the delay (in milliseconds) as needed
+
+
 	 </script>
 </head>
 
 <body>
    <div class="scrolling-banner" id="header" style="  margin: 0 auto;">
-        <button onclick="scrollToTop()" style="display: block;><img src="images/banner.png" alt="Banner Image"></button>
+        <button onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
     </div>
     <div class="content">
         <h1 style="text-align: center;">Original by: <a href="https://twitter.com/_SoAwesome_"style="color: red; text-decoration: none;">@_SoAwesome_</a></h1>
