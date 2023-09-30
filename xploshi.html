@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Breaking the Bad</title>
+  <style>
+    body {
+            margin: 0;
+            padding: 0;
+            background-image: url('images/background.jpg');
+            background-size: 25%;
+            background-repeat: repeat;
+        }
+
+      .scrolling-banner {
+           position: fixed;
+	         top: 0%;
+        }
+</style>
+
+  <script>
+    function scrollToTop() {
+  // Create an animation function
+  function animateScroll() {
+    const scrollY = window.scrollY;
+    if (scrollY > 0) {
+      // Calculate the distance to scroll in each frame
+      const distance = Math.max(scrollY / 60, 1); // Adjust the 60 for desired speed
+      
+      // Scroll by the distance calculated
+      window.scrollTo(0, scrollY - distance);
+      // Request the next frame
+      window.requestAnimationFrame(animateScroll);
+    }
+  }
+
+  // Start the animation
+  animateScroll();
+}
+
+// Define a debounce function
+window.onscroll = function() {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  const header = document.getElementById("header");
+  const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollPosition !== 0) {
+    header.style.width = "400px";
+    header.style.height = "100px";
+    header.style.left = "35%";
+  } else {
+    header.style.width = "auto";
+    header.style.height = "auto";
+    header.style.left = "0%";
+  }
+}
+  </script>
+</head>
+<body>
+  <div class="scrolling-banner" id="header" style="  margin: 0 auto;">
+        <button onclick="scrollToTop()"><img src="images/banner.png" alt="Banner Image"></button>
+    </div>
+    <!-- Your content goes here -->
+</body>
+</html>
 
